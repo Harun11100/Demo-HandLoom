@@ -8,56 +8,11 @@ import Navbar from "./Navbar";
 
 const Header = () => {
   return (
-//     <header className="bg-white shadow-sm">
-//       <div className="container mx-auto flex items-center justify-between py-4 px-6">
-//         <div className="flex items-center space-x-6">
-//           <Image src="/logo.svg" alt="HandLoom Logo" width={400} height={200} />
-//         </div>
 
- 
-//         <div className="flex items-center">
-//           <input
-//             type="text"
-//             placeholder="Search for products..."
-//             className="w-full rounded-md border border-gray-200 bg-white py-2.5 pl-10 pr-12 text-sm shadow-lg font-medium focus:border-black focus:outline-none focus:ring-0"
-//           />
-//           <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-r-md">
-//             <svg
-//               className="w-5 h-5"
-//               fill="none"
-//               stroke="currentColor"
-//               strokeWidth="2"
-//               viewBox="0 0 24 24"
-//               xmlns="http://www.w3.org/2000/svg"
-//             >
-//               <path
-//                 strokeLinecap="round"
-//                 strokeLinejoin="round"
-//                 d="M21 21l-4.35-4.35M17 10a7 7 0 11-14 0 7 7 0 0114 0z"
-//               ></path>
-//             </svg>
-//           </button>
-//         </div>
-
-//         <div className="flex items-center space-x-6">
-//           <Link href="/account" className="flex items-center text-gray-700 hover:text-yellow-500">
-//             <span>My Account</span>
-//           </Link>
-//           <Link href="/cart" className="flex items-center text-gray-700 hover:text-yellow-500">
-//             <span>My Cart</span>
-//           </Link>
-//         </div>
-//       </div>
-//       <div className="flex items-center justify-between px-6 py-2 bg-yellow-500 hover:text-white" >
-//         <Navbar/>
-//       </div>
-     
-//     </header>
 <header className="bg-white shadow-sm">
   <div className="max-w-screen-xl mx-auto flex items-center justify-between py-4 px-6">
-    {/* Logo */}
     <div className="flex items-center">
-      <Image src="/logo.svg" alt="HandLoom Logo" width={120} height={60} />
+      <Image src="/logo.svg" alt="HandLoom Logo" width={300} height={60} />
     </div>
 
     {/* Search Bar */}
@@ -101,7 +56,7 @@ const Header = () => {
   </div>
 
   {/* Navbar Section */}
-  <div className="bg-yellow-500 text-white px-6 py-2">
+  <div className="bg-white text-gray-400 px-6 py-2">
     <Navbar />
   </div>
 </header>
