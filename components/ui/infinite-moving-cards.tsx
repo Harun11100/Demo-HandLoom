@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 export const InfiniteMovingCards = ({
   items,
   direction = "left",
-  speed = "fast",
+  speed = "normal",
   pauseOnHover = true,
   className,
 }: {
@@ -79,7 +79,6 @@ export const InfiniteMovingCards = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          // change gap-16
           " flex min-w-full bg-gray-200 shrink-0 gap-16 py-4 w-max flex-nowrap",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
@@ -102,20 +101,16 @@ export const InfiniteMovingCards = ({
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
-              {/* change text color, text-lg */}
+          
               <span className=" relative items-center z-20 text-sm md:text-lg leading-[1.6] text-gray-800 font-bold">
                 {item.title}
               </span>
               <div className="relative mt-6 ">
-                {/* add this div for the profile img */}
+                
                 <div className="flex items-center justify-center gap-4">
                 <Image width={180} height={90} src={item.img} alt={item.title} />
                 </div>
-                {/* <span className="flex flex-col gap-1">
-                  <span className=" text-sm leading-[1.6] text-white-200 font-normal">
-                    {item.title}
-                  </span>
-                </span> */}
+                
               </div>
             </blockquote>
           </li>

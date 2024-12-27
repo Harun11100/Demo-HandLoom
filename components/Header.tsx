@@ -56,7 +56,7 @@ const Header = () => {
   </div>
 
   {/* Navbar Section */}
-  <div className="bg-white text-gray-400 px-6 py-2">
+  <div className="bg-white text-gray-400  px-6 py-4">
     <Navbar />
   </div>
 </header>
