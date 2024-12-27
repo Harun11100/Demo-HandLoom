@@ -16,6 +16,12 @@ const Navbar = () => {
       <Link href="/shirt" className="text-gray-700 hover:text-yellow-500  ">
         Shirt
       </Link>
+      <Link href="/t-shirt" className="text-gray-700 hover:text-yellow-500  ">
+        T-Shirt
+      </Link>
+      <Link href="/jacket" className="text-gray-700 hover:text-yellow-500  ">
+        Jacket
+      </Link>
       <Link href="/all-products" className="text-gray-700 hover:text-yellow-500  ">
         All Products
       </Link>

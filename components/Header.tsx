@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "./Navbar";
+import MobileNavbar from "./MobileNavbar";
 
 
 const Header = () => {
@@ -57,6 +58,8 @@ const Header = () => {
 
   {/* Navbar Section */}
   <div className="bg-white text-gray-400  px-6 py-4">
+    
+    <MobileNavbar/>
     <Navbar />
   </div>
 </header>

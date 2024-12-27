@@ -1,7 +1,6 @@
 import React from "react";
 import { Card, CardItem, Carousel } from "./ui/apple-cards-carousel";
-import { mockCards, products } from "@/const";
-
+import { products } from "@/constant";
 
 // const mockCards = [
 //   {
@@ -25,9 +24,8 @@ import { mockCards, products } from "@/const";
 // ];
 
 const CarouselSlider = () => {
-  const items = products.map((product,index) => (
-       <CardItem key={index} product={product}/>
-
+  const items = products.map((product, index) => (
+    <CardItem key={index} product={product} />
   ));
 
   return (

@@ -4,7 +4,7 @@
 import React, { useEffect, useState } from "react";
 
 interface CountdownTimerProps {
-  endTime: string; // ISO string representing the deal's end time
+  endTime: string; 
 }
 
 const CountdownTimer: React.FC<CountdownTimerProps> = ({ endTime }) => {
@@ -31,7 +31,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ endTime }) => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    return () => clearInterval(timer); // Cleanup interval on component unmount
+    return () => clearInterval(timer); 
   }, [endTime]);
 
   if (!timeLeft) {
