@@ -20,6 +20,10 @@ const items=[
           {
             img:'/t-shirt.jpg',
             title: "T-shirt"
+          },
+          {
+            img:'/polo-t-shirt.jpg',
+            title:'Polo T-shirt'
           }
   ]
 
@@ -29,7 +33,7 @@ const items=[
 const Home = () => {
   return (
     <div className='bg-gray-100'>
-      <Header/>
+ 
       <div className='bg-gray-800 text-white text-center'>
             <InfiniteMovingCards items={items}/>
       </div>

@@ -2,7 +2,6 @@
 import Image from "next/image";
 
 const CardItem = ({ product }) => {
-  console.log(product)
   return (
     <div className="border rounded-lg shadow-md overflow-hidden bg-white">
       {/* Product Image */}
