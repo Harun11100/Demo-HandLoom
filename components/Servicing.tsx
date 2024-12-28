@@ -2,7 +2,7 @@ import { service } from '@/constant'
 import Image from 'next/image'
 import React from 'react'
 
-const Services = () => {
+const Servicing = () => {
   return (
     <section className="w-full max-w-screen-xl mx-auto py-4 px-6">
      <div className='grid grid-cols-2  gap-6 md:grid-cols-4'>
@@ -23,4 +23,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default Servicing

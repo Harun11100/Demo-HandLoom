@@ -4,7 +4,8 @@ import Footer from "@/components/Footer";
 
 import Products from "@/components/Product";
 import Promo from "@/components/Promo";
-import Services from "@/components/services";
+import Servicing from "@/components/Servicing";
+
 
 
 
@@ -31,7 +32,7 @@ const Home = () => {
         <div className="mt-20 mb-25">
           <Promo/>
         </div>
-        <Services/>
+        <Servicing/>
       </main>
     
       <Footer/>
