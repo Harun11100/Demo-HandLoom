@@ -1,8 +1,10 @@
 import CarouselSlider from "@/components/CarouselSlider";
 import CountdownTimer from "@/components/CountdownTimer";
+import Footer from "@/components/Footer";
 
 import Products from "@/components/Product";
 import Promo from "@/components/Promo";
+import Services from "@/components/services";
 
 
 
@@ -31,6 +33,8 @@ const Home = () => {
         </div>
         
       </main>
+      <Services/>
+      <Footer/>
     </div>
   );
 };
