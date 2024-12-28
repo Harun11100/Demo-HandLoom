@@ -59,7 +59,7 @@ const Header = () => {
   {/* Navbar Section */}
   <div className="bg-white text-gray-400  px-6 py-4">
     
-    <MobileNavbar/>
+    {/* <MobileNavbar/> */}
     <Navbar />
   </div>
 </header>

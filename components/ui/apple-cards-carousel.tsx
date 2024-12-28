@@ -165,7 +165,8 @@ export const CardItem = ({ product }) => {
         <Image
           src={product.image}
           alt={product.name}
-          layout="fill"
+          width={400}
+          height={400}
           objectFit="cover"
           className="transition-transform duration-300 hover:scale-105"
         />

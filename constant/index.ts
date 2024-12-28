@@ -100,3 +100,27 @@ export const products= [
         labe:"Best Discounts"
       }
     ];
+
+
+    export const service=[
+      {
+        title: "48 Hours Delivery",
+        description: "48 hours delivery time",
+        icon: "/icons/24-hours.svg",
+      },
+      {
+        title: "Online Support 24/7",
+        description: "Support 24 hours a day",
+        icon: "/icons/24-hours-support.svg",
+      },
+      {
+        title: "Member Discount",
+        description: "On every order over 1500tk",
+        icon: "/icons/member-card.svg",
+      },
+      {
+        title: "Money Return",
+        description: "7 days money back gurantee",
+        icon: "/icons/give-money.svg",
+      },
+    ]

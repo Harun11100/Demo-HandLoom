@@ -1,7 +1,11 @@
 import CarouselSlider from "@/components/CarouselSlider";
 import CountdownTimer from "@/components/CountdownTimer";
+import Footer from "@/components/Footer";
 import Products from "@/components/Product";
+import Promo from "@/components/Promo";
 import Services from "@/components/services";
+
+
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { item } from "@/constant";
 import React from "react";
@@ -22,10 +26,17 @@ const Home = () => {
           </div>
           <CarouselSlider />
         </div>
-        <div>
+        <div className="mt-20">
+          <Promo/>
+        </div>
+        <div className="mt-20">
           <Services/>
         </div>
+        
       </main>
+      
+          <Footer/>
+        
     </div>
   );
 };
