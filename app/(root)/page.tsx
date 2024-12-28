@@ -33,7 +33,7 @@ const Home = () => {
         </div>
         
       </main>
-      {/* <Services/> */}
+      <Services/>
       <Footer/>
     </div>
   );
