@@ -24,9 +24,9 @@ const Home = () => {
       <main className="bg-gray-100 max-w-screen-xl mx-auto py-4 px-6">
         <Products />
         <div className="border-4 border-red-600 rounded-xl">
-          {/* <div>
+          <div>
             <CountdownTimer endTime="2024-12-31T23:59:59" />
-          </div> */}
+          </div>
           <CarouselSlider />
         </div>
         <div className="mt-20 mb-25">
