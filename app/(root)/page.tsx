@@ -31,9 +31,9 @@ const Home = () => {
         <div className="mt-20 mb-25">
           <Promo/>
         </div>
-        
+        <Services/>
       </main>
-      <Services/>
+    
       <Footer/>
     </div>
   );
