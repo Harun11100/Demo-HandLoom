@@ -62,10 +62,14 @@ export const products= [
     
 
     export const sidebarLinks = [
+      
       {
-        imgURL: "/icons/home.svg",
-        route: "/",
-        label: "Home",
+        route:'/account',
+        label:'Account'
+      },
+      {
+        route:'/cart',
+        label:'Cart'
       },
       {
         

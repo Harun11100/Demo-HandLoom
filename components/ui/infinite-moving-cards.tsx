@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 export const InfiniteMovingCards = ({
   items,
@@ -106,10 +107,12 @@ export const InfiniteMovingCards = ({
                 {item.title}
               </span>
               <div className="relative mt-6 ">
-                
+                <Link href='/all-products'>
                 <div className="flex items-center justify-center gap-4">
                 <Image width={180} height={90} src={item.img} alt={item.title} />
                 </div>
+                </Link>
+                
                 
               </div>
             </blockquote>

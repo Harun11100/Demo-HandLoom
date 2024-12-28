@@ -1,5 +1,4 @@
-"use client"
-
+'use client'
 
 import React, { useEffect, useState } from "react";
 
@@ -21,7 +20,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ endTime }) => {
         seconds: Math.floor((timeLeft % (1000 * 60)) / 1000),
       };
     }
-    return null; // Deal has ended
+    return null; 
   };
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
