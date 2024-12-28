@@ -1,13 +1,14 @@
-'use client'
+"use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 
 interface CountdownTimerProps {
-  endTime: string; 
+  endTime: string;
 }
 
 const CountdownTimer: React.FC<CountdownTimerProps> = ({ endTime }) => {
-  const calculateTimeLeft = () => {
+  // Memoize the `calculateTimeLeft` function
+  const calculateTimeLeft = useCallback(() => {
     const now = new Date().getTime();
     const targetTime = new Date(endTime).getTime();
     const timeLeft = targetTime - now;
@@ -20,8 +21,8 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ endTime }) => {
         seconds: Math.floor((timeLeft % (1000 * 60)) / 1000),
       };
     }
-    return null; 
-  };
+    return null; // If the time has passed, return null
+  }, [endTime]);
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
@@ -30,8 +31,8 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ endTime }) => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    return () => clearInterval(timer); 
-  }, [endTime]);
+    return () => clearInterval(timer); // Cleanup the timer
+  }, [calculateTimeLeft]);
 
   if (!timeLeft) {
     return (
@@ -42,11 +43,13 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ endTime }) => {
   }
 
   return (
-    <div className="text-center bg-gray-200 border border-gray-300 rounded-lg p-5  mx-auto">
+    <div className="text-center bg-gray-200 border border-gray-300 rounded-lg p-5 mx-auto">
+      <h2 className="text-xl text-black font-semibold mb-2">
+        Latest Deal Ends In:
+      </h2>
       <div className="flex justify-center gap-2 text-lg font-bold text-gray-800">
-      <h2 className="text-xl text-black font-semibold ">Latest Deal Ends In:</h2>
-        <div >
-          <span className=" text-orange-500">{timeLeft.days}</span> Days
+        <div>
+          <span className="text-orange-500">{timeLeft.days}</span> Days
         </div>
         <div>
           <span className="text-orange-500">{timeLeft.hours}</span> Hours
