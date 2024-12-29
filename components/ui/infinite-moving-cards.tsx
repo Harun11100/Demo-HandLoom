@@ -15,6 +15,7 @@ export const InfiniteMovingCards = ({
   items: {
     img: string;
     title: string;
+    route: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -90,7 +91,7 @@ export const InfiniteMovingCards = ({
                 {item.title}
               </span>
               <div className="relative mt-6">
-                <Link href="/all-products">
+                <Link href={item.route}>
                   <div className="flex items-center justify-center gap-4">
                     <Image width={180} height={90} src={item.img} alt={item.title} />
                   </div>

@@ -41,22 +41,27 @@ export const products= [
       {
         img: "/panjabi1.jpg",
         title: "Punjabi",
+        route: "/panjabi",
       },
       {
         img: "/shirt.jpg",
         title: "Shirt",
+        route: "/shirt",
       },
       {
         img: "/jacket1.jpg",
         title: "Jacket",
+        route:"/jacket",
       },
       {
         img: "/t-shirt.jpg",
         title: "T-shirt",
+        route: "/t-shirt",
       },
       {
         img: "/polo-t-shirt.jpg",
         title: "Polo T-shirt",
+        route:"/polo-shirt",
       },
     ];
     
