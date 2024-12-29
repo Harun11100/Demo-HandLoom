@@ -8,15 +8,8 @@ const nextConfig = {
     ignoreDuringBuilds: true, 
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'handloom.store',
-        port: '',
-        pathname: '/wp-content/uploads/', // Allow any path under /wp-content/uploads/
-        search: '',
-      },
-    ],
+      domains: ['handloom.store']
+  
   },
 };
 

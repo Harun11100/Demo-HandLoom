@@ -155,27 +155,38 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
 };
 
 export const CardItem = ({ product }) => {
+
+  const name=product.name
+
+  function getFirstTwentyThreeCharacters(inputString: string): string {
+    if (inputString.length <= 23) {
+      return inputString; // Return the full string if it's 23 characters or less
+    }
+    return inputString.slice(0, 20) + '...'; // Take the first 20 characters and add "..."
+  }
+  
+  
+  const inputString = getFirstTwentyThreeCharacters(name);
+
   return (
-    <div className="border rounded-lg shadow-md overflow-hidden bg-white">
+    <div className="border rounded-lg shadow-md  overflow-hidden bg-white">
       {/* Product Image */}
       <div className="relative w-full h-64">
         <Image
-          src={product.image ?? "/defaultproduct.jpg"}
+          src={product.images[0]?.src || '/default-image.jpg'} 
           alt={product.name}
           layout="fill"
           objectFit="cover"
           className="transition-transform duration-300 hover:scale-105"
         />
       </div>
-
-      
       <div className="p-4">
         {/* Product Code */}
         <p className="text-sm text-gray-500 mb-2">{product.sku}</p>
 
         {/* Product Name */}
         <h3 className="text-lg font-semibold text-gray-800 truncate mb-2">
-          {product.name}
+          {inputString}
         </h3>
 
         {/* Pricing */}
@@ -194,3 +205,6 @@ export const CardItem = ({ product }) => {
     </div>
   );
 };
+
+
+

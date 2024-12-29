@@ -4,14 +4,14 @@ import { useEffect, useState } from "react";
 import CardItem from "./CardItem";
 
 const Products = ({ products }) => {
-  console.log(products)
+
   const [productsList, setProductsList] = useState([]);
 
   useEffect(() => {
     if (!products || products.length === 0) return;
 
     const formattedProducts = products.map((item) => ({
-      image:'/defaultproduct.jpg',
+      image: item.images[0].src,
       name: item.name,
       code: item.sku|| "N/A",
       originalPrice: `${item.regular_price} ৳`,
