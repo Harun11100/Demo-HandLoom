@@ -79,7 +79,7 @@ const Header = () => {
         {/* Mobile Menu Toggle */}
         
            {mobileMenuOpen && (
-        <div className="sm:hidden bg-gray-100 text-gray-700 px-2 shadow-md">
+        <div className="sm:hidden px-2 text-gray-700">
           <MobileNavbar/>
         </div>
          )}

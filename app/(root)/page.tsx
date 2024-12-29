@@ -23,7 +23,7 @@ const Home = async () => {
       </div>
       <main className="bg-gray-100 max-w-screen-xl mx-auto py-4 px-6">
         <Products products={products}/>
-        <div className="border-4 border-red-600 rounded-xl">
+        <div className="border-4 border-yellow-500 rounded-xl">
           <div>
             <CountdownTimer endTime="2024-12-31T23:59:59" />
           </div>
