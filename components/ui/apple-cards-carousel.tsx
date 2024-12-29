@@ -1,10 +1,8 @@
 "use client";
 import React, {
   useEffect,
-  useRef,
   useState,
   createContext,
-  useContext,
 } from "react";
 import {
   IconArrowNarrowLeft,
@@ -12,9 +10,8 @@ import {
   IconX,
 } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
-import Image, { ImageProps } from "next/image";
-import { useOutsideClick } from "@/hooks/useOutsideClick";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 
 interface CarouselProps {
@@ -163,10 +160,9 @@ export const CardItem = ({ product }) => {
       {/* Product Image */}
       <div className="relative w-full h-64">
         <Image
-          src={product.image}
+          src={product.image ?? "/defaultproduct.jpg"}
           alt={product.name}
-          width={400}
-          height={400}
+          layout="fill"
           objectFit="cover"
           className="transition-transform duration-300 hover:scale-105"
         />
@@ -175,7 +171,7 @@ export const CardItem = ({ product }) => {
       
       <div className="p-4">
         {/* Product Code */}
-        <p className="text-sm text-gray-500 mb-2">{product.code}</p>
+        <p className="text-sm text-gray-500 mb-2">{product.sku}</p>
 
         {/* Product Name */}
         <h3 className="text-lg font-semibold text-gray-800 truncate mb-2">
@@ -185,9 +181,9 @@ export const CardItem = ({ product }) => {
         {/* Pricing */}
         <div className="flex items-center space-x-2 mb-4">
           <span className="text-gray-400 line-through text-sm">
-            {product.originalPrice}
+            {product.regular_price} ৳
           </span>
-          <span className="text-red-500 font-bold">{product.discountPrice}</span>
+          <span className="text-red-500 font-bold">{product.sale_price} ৳</span>
         </div>
 
         {/* Buy Button */}

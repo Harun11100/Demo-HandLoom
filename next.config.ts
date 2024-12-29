@@ -1,11 +1,22 @@
 const nextConfig = {
   // Add custom config options here if needed
-  reactStrictMode: false, // Disables React's strict mode
+  reactStrictMode: false, 
   typescript: {
-    ignoreBuildErrors: true, // Ignores TypeScript build errors
+    ignoreBuildErrors: true, 
   },
   eslint: {
-    ignoreDuringBuilds: true, // Ignores ESLint errors during builds
+    ignoreDuringBuilds: true, 
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'handloom.store',
+        port: '',
+        pathname: '/wp-content/uploads/', // Allow any path under /wp-content/uploads/
+        search: '',
+      },
+    ],
   },
 };
 

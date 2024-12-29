@@ -1,74 +1,31 @@
-// pages/products.js
+'use client';
 
+import { useEffect, useState } from "react";
 import CardItem from "./CardItem";
 
-//Temporary data
+const Products = ({ products }) => {
+  console.log(products)
+  const [productsList, setProductsList] = useState([]);
 
-const products = [
-  {
-    code: "Code: S-401",
-    name: "Premium Pedding Jacket for Men's",
-    originalPrice: "2,080.00৳",
-    discountPrice: "1,480.00৳",
-    image: "/product-1.jpeg",
-  },
-  {
-    code: "Code: S-403 (Diamond Orange)",
-    name: "Premium Padding Jacket for Men's",
-    originalPrice: "2,080.00৳",
-    discountPrice: "1,480.00৳",
-    image: "/product-2.png",
-  },
-  {
-      code: "Code: S-501",
-      name: "Premium Pedding Jacket for Men's",
-      originalPrice: "2,080.00৳",
-      discountPrice: "1,480.00৳",
-      image: "/product-1.jpeg",
-    },
-    {
-      code: "Code: S-603 (Diamond Orange)",
-      name: "Premium Padding Jacket for Men's",
-      originalPrice: "2,080.00৳",
-      discountPrice: "1,480.00৳",
-      image: "/product-3.jpeg",
-    },
-    {
-      code: "Code: S-401",
-      name: "Premium Pedding Jacket for Men's",
-      originalPrice: "2,080.00৳",
-      discountPrice: "1,480.00৳",
-      image: "/product-1.jpeg",
-    },
-    {
-      code: "Code: S-403 (Diamond Orange)",
-      name: "Premium Padding Jacket for Men's",
-      originalPrice: "2,080.00৳",
-      discountPrice: "1,480.00৳",
-      image: "/product-2.png",
-    },
-    {
-        code: "Code: S-501",
-        name: "Premium Pedding Jacket for Men's",
-        originalPrice: "2,080.00৳",
-        discountPrice: "1,480.00৳",
-        image: "/product-1.jpeg",
-      },
-      {
-        code: "Code: S-603 (Diamond Orange)",
-        name: "Premium Padding Jacket for Men's",
-        originalPrice: "2,080.00৳",
-        discountPrice: "1,480.00৳",
-        image: "/product-3.jpeg",
-      },
-];
+  useEffect(() => {
+    if (!products || products.length === 0) return;
 
-const Products = () => {
+    const formattedProducts = products.map((item) => ({
+      image:'/defaultproduct.jpg',
+      name: item.name,
+      code: item.sku|| "N/A",
+      originalPrice: `${item.regular_price} ৳`,
+      discountPrice: `${item.sale_price} ৳`,
+    }));
+    setProductsList(formattedProducts);
+  }, [products]);
+
+
   return (
     <div className="container mb-20 mx-auto py-8">
       <h1 className="text-2xl text-gray-700 font-bold mb-6">Our Products</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {products.map((product, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"> 
+        {productsList.map((product, index) => (
           <CardItem key={index} product={product} />
         ))}
       </div>

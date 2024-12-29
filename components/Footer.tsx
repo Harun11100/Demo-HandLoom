@@ -52,7 +52,7 @@ const Footer = () => {
           <span className="text-sm">Download App:</span>
           <a href="#" aria-label="Download on Google Play">
             <Image
-              src="/icons/googleplay.svg"
+              src="/google.png"
               alt="Download on Google Play"
               width={140}
               height={50}
@@ -60,7 +60,7 @@ const Footer = () => {
           </a>
           <a href="#" aria-label="Download on the App Store">
             <Image
-              src="/icons/applestore.svg"
+              src="/apple.jpg"
               alt="Download on the App Store"
               width={140}
               height={50}
