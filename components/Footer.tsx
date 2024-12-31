@@ -60,7 +60,7 @@ const Footer = () => {
           </a>
           <a href="#" aria-label="Download on the App Store">
             <Image
-              src="/apple.jpg"
+              src="/apple.png"
               alt="Download on the App Store"
               width={140}
               height={50}

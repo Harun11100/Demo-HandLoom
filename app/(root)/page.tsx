@@ -15,7 +15,7 @@ const items=item
 const Home = async () => {
 
   const products=await fetchProducts()
-  console.log(products)
+
   return (
     <div className="bg-gray-100">
       <div className="bg-gray-800 text-white text-center">
