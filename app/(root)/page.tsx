@@ -25,7 +25,7 @@ const Home = async () => {
         <Products products={products}/>
         <div className="border-4 border-yellow-500 rounded-xl">
           <div>
-            <CountdownTimer endTime="2024-12-31T23:59:59" />
+            <CountdownTimer endTime="2025-01-10T23:59:59" />
           </div>
           <CarouselSlider products={products}/>
         </div>
